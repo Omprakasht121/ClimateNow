@@ -3,7 +3,7 @@ import { calculateIndianAQI } from "../services/indianAqiCalculator";
 import { getAQICategory } from "../utils/aqiUtils";
 
 
-const AQICard = ({aqiData, loading, onClick}) => {
+const AQICard = ({aqiData, loading,}) => {
 
   if (loading) {
     return (

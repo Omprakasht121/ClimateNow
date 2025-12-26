@@ -3,8 +3,8 @@ import { Search, MapPin, X } from "lucide-react";
 
 
 import WeatherCard from "../component/WeatherCard";
-import AQICard from "../component/AqiCard";
 import NewsCard from "../component/NewsCard";
+import AQICard from "../component/AQICard";
 import { getCurrentWeather } from "../services/weatherService";
 import useGeolocation from "../hooks/useGeolocation";
 import { searchLocation } from "../services/locationService";
@@ -254,7 +254,7 @@ const Dashboard = () => {
                   }}
                   className="cursor-pointer bg-red-600 rounded-3xl p-8 text-white hover:ring-2 hover:ring-blue-400"
                 >
-                  
+
                 </div>
                 { finalLocation && (
                 <div className="mt-6">
