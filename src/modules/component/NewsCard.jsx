@@ -31,7 +31,7 @@ const NewsCard = ({ newsData, loading }) => {
               <div className="h-56 md:h-64 overflow-hidden ">
                 <img
                   src={
-                    article.urlToImage ||
+                    article.image ||
                     "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
                   }
                   alt={article.title}
