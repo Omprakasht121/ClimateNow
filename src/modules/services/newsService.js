@@ -1,10 +1,11 @@
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-const BASE_URL = "https://gnews.io/api/v4/search";
+// const BASE_URL = "https://gnews.io/api/v4/search";
+const BASE_URL = "https://content.guardianapis.com/search";
 
 export const getWeatherNews = async () => {
   try {
     const response = await fetch(
-    `${BASE_URL}?q=weather OR climate OR pollution OR air quality&lang=en&country=in&max=10&apikey=${API_KEY}`
+    `${BASE_URL}?q=weather%20OR%20climate%20OR%20pollution&show-fields=thumbnail,trailText&order-by=newest&api-key=${API_KEY}`
   );
 
 
@@ -13,7 +14,7 @@ export const getWeatherNews = async () => {
   }
 
   const data = await response.json();
-  console.log(data)
+
   return data;
   } catch (error) {
     console.log(error)

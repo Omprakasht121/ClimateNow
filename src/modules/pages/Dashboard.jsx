@@ -115,22 +115,14 @@ const Dashboard = () => {
 
   // news data loading 
   useEffect(() => {
+  const fetchNews = async () => {
+    const articles = await getWeatherNews();
+    setNewsData(articles);
+    setNewsLoading(false);
+  };
 
-
-    const fetchNews = async () =>{
-      try{
-        const data = await getWeatherNews();
-        setNewsData(data);
-      }
-      catch(error){
-        console.log(error);
-      }
-      finally{
-        setNewsLoading(false);
-      }
-    }
-    fetchNews()
-  },[])
+  fetchNews();
+}, []);
 
     if (locationLoading) {
     return <p className="text-center mt-10">Detecting location...</p>;
