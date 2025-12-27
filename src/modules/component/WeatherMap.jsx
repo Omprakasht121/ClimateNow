@@ -8,9 +8,9 @@ const WeatherMap = ({ lat, lon, layer }) => {
        center={[lat, lon]}
       zoom={4}
       scrollWheelZoom={false}    
-    doubleClickZoom={false}     
-    touchZoom={true}
-    dragging={true}
+      doubleClickZoom={false}     
+      touchZoom={true}
+      dragging={false}
     
       className="rounded-2xl overflow-hidden h-[55vh] md:h[110vh] w-100%"
       
