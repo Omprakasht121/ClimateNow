@@ -235,21 +235,26 @@ const Dashboard = () => {
 
         {/* WEATHER + AQI */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 ">
               <WeatherCard weatherData ={weatherData} loading = {weatherLoading}/>
-            <AQICard aqiData = {aqiData} loading={aqiLoading}/>
+              <AQICard aqiData = {aqiData} loading={aqiLoading}/>
             </div>
-            <div>
-               <div
-                  onClick={() => {
-                    setMapLayer(prev => !prev);
-                  }}
-                  className="cursor-pointer bg-red-600 rounded-3xl p-8 text-white hover:ring-2 hover:ring-blue-400"
+            <div className="">
+              <div
+                  
+                  className="cursor-pointer flex  bg-rose-200/10 border border-gray-500 rounded-3xl p-5 text-white hover:ring-2 hover:ring-gray-400"
                 >
-
+                  <div className="flex justify-center items-center gap-2 p-2 px-6 rounded-full bg-gray-600">
+                    <h3 className="font-bold text-xl">SUMMARIZE</h3>
+                    <img src="/gemini.png" alt="Image" 
+                    className="h-8 w-8"/>
+                  </div>
+                  <div>
+                    
+                  </div>
                 </div>
                 { finalLocation && (
-                <div className="mt-6">
+                <div className="mt-6 border border-gray-500 rounded-lg">
                   <WeatherMap
                     lat={finalLocation.lat}
                     lon={finalLocation.lon}

@@ -23,7 +23,7 @@ const aqiStatus = getAQICategory(indianAQI)
 
   return (
     
-    <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl min-h-[300px] md:h-96 flex flex-col justify-between">
+    <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl min-h-[300px]  flex flex-col justify-between">
      
       <div>
         <h2 className="text-xl font-semibold text-slate-400 mb-6">
